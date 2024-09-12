@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import React from "react";
 
-const textStyles = StyleSheet.create({
+const styles = StyleSheet.create({
     bigRed: {
         color: 'red',
         fontSize: 20
@@ -9,8 +9,13 @@ const textStyles = StyleSheet.create({
     bigBlue: {
         color: 'blue',
         fontSize: 20
+    },
+    normalBox: {
+        alignSelf: 'center',
+        padding: 10,
+        margin: 10,
+        backgroundColor: 'blue'
     }
-
 })
 
-export default textStyles
+export default styles

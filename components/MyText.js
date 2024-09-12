@@ -1,9 +1,9 @@
 import React from "react"
 import { Text } from "react-native"
-import textStyles from "./styles";
+import styles from "./styles";
 
 const MyText = () => {
-    return <Text style={[textStyles.bigRed]}>Text Content 5!</Text>;
+    return <Text style={[styles.bigRed]}>This is the body text</Text>;
 };
 
 export default MyText;
