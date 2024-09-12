@@ -7,12 +7,14 @@
 
 import React from 'react';
 import { View, Text, SafeAreaView } from 'react-native';
+import MyText from './components/MyText';
 
 const App = () => {
   return (
     <SafeAreaView>
-      <Text>Hello World!</Text>
+      <MyText/>
     </SafeAreaView>
   );
 };
+
 export default App;
