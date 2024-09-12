@@ -17,9 +17,8 @@ const App = () => {
       <View style={styles.normalBox}><Text>this is the header</Text></View>
       <MyText/>
       <View style={styles.normalBox}><Text>this is the footer</Text></View>
-
-      // view that accepts properties
-      <ItemView name={'table'} price={'$20'}></ItemView>
+      
+      <ItemView name={'table'} price={'$21'}></ItemView>
     </SafeAreaView>
   );
 };
