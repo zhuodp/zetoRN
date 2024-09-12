@@ -5,8 +5,8 @@
  * @format
  */
 
-import React, {useState, useEffect} from 'react';
-import { View, Text, SafeAreaView } from 'react-native';
+import React, {useState, useEffect, useRef} from 'react';
+import { View, Text, SafeAreaView, ScrollView, Button } from 'react-native';
 import MyText from './components/MyText';
 import styles from './components/styles';
 import ItemView from './components/ItemView';
@@ -14,6 +14,12 @@ import Toast from "react-native-toast-message";
 
 
 const App = () => {
+  
+  const scrollViewRef = useRef(null)
+  const onScrollToTop = () => {
+    scrollViewRef.current.scrollTo(0, 0, true)
+  }
+
   const [textWithState, setText] = useState('original state(click me)')
 
   useEffect(() => {
@@ -24,6 +30,8 @@ const App = () => {
     console.log("useState text has changed to " + textWithState)
   }, [textWithState])
 
+  let listItems = Array(100).fill(0)
+
   return (
     <SafeAreaView>
       <View style={styles.normalBox}><Text>this is the header</Text></View>
@@ -32,6 +40,11 @@ const App = () => {
       <ItemView name={'table'} price={'$21'}></ItemView>
 
       <Text onPress={() => setText('new state')}>{textWithState}</Text>
+
+      <ScrollView style={{height: 200}} ref={scrollViewRef}>
+        {listItems.map((value, index) => (<Text key={index}>Hello World!</Text>))}
+      </ScrollView>
+      <Button onPress={onScrollToTop} title='Scroll To Top'></Button>
     </SafeAreaView>
   );
 };
