@@ -40,9 +40,10 @@ const App = () => {
     <SafeAreaView>
         {/* basic UI */}
         {/* <View style={styles.normalBox}><Text>this is the header</Text></View>
-        <MyText/>
         <View style={styles.normalBox}><Text>this is the footer</Text></View>
         <ItemView name={'table'} price={'$21'} /> */}
+
+        <MyText name={''}/>
 
         <Text onPress={() => setText('new state')}>{textWithState}</Text>
 
