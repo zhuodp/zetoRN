@@ -6,12 +6,13 @@
  */
 
 import React, {useState, useEffect, useRef} from 'react';
-import { View, Text, SafeAreaView, ScrollView, Button } from 'react-native';
+import { Text, SafeAreaView, ScrollView, Button } from 'react-native';
 import MyText from './components/MyText';
 import styles from './components/styles';
 import ItemView from './components/ItemView';
 import { ThemeProvider } from './components/ThemeProvider';
 import { ThemeToggle } from './components/ThemeToggle';
+import useToggle from './customHooks/useToggle';
 
 
 const App = () => {
@@ -33,12 +34,15 @@ const App = () => {
 
   let listItems = Array(100).fill(0);
 
+  const [isOn, toggleIsOn] = useToggle(false);
+
   return (
     <SafeAreaView>
-        <View style={styles.normalBox}><Text>this is the header</Text></View>
+        {/* basic UI */}
+        {/* <View style={styles.normalBox}><Text>this is the header</Text></View>
         <MyText/>
         <View style={styles.normalBox}><Text>this is the footer</Text></View>
-        <ItemView name={'table'} price={'$21'} />
+        <ItemView name={'table'} price={'$21'} /> */}
 
         <Text onPress={() => setText('new state')}>{textWithState}</Text>
 
@@ -50,6 +54,9 @@ const App = () => {
         <ThemeProvider>
             <ThemeToggle />
         </ThemeProvider>
+
+        <Button title={isOn ? 'ON' : 'OFF'} onPress={toggleIsOn} />
+
     </SafeAreaView>
   );
 };
