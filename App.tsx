@@ -10,41 +10,46 @@ import { View, Text, SafeAreaView, ScrollView, Button } from 'react-native';
 import MyText from './components/MyText';
 import styles from './components/styles';
 import ItemView from './components/ItemView';
-import Toast from "react-native-toast-message";
+import { ThemeProvider } from './components/ThemeProvider';
+import { ThemeToggle } from './components/ThemeToggle';
 
 
 const App = () => {
-  
-  const scrollViewRef = useRef(null)
+
+  const scrollViewRef = useRef(null);
   const onScrollToTop = () => {
-    scrollViewRef.current.scrollTo(0, 0, true)
-  }
+    scrollViewRef.current.scrollTo(0, 0, true);
+  };
 
-  const [textWithState, setText] = useState('original state(click me)')
-
-  useEffect(() => {
-    console.log("The component has rendered")
-  }, [])
+  const [textWithState, setText] = useState('original state(click me)');
 
   useEffect(() => {
-    console.log("useState text has changed to " + textWithState)
-  }, [textWithState])
+    console.log('The component has rendered');
+  }, []);
 
-  let listItems = Array(100).fill(0)
+  useEffect(() => {
+    console.log('useState text has changed to ' + textWithState);
+  }, [textWithState]);
+
+  let listItems = Array(100).fill(0);
 
   return (
     <SafeAreaView>
-      <View style={styles.normalBox}><Text>this is the header</Text></View>
-      <MyText/>
-      <View style={styles.normalBox}><Text>this is the footer</Text></View>
-      <ItemView name={'table'} price={'$21'}></ItemView>
+        <View style={styles.normalBox}><Text>this is the header</Text></View>
+        <MyText/>
+        <View style={styles.normalBox}><Text>this is the footer</Text></View>
+        <ItemView name={'table'} price={'$21'} />
 
-      <Text onPress={() => setText('new state')}>{textWithState}</Text>
+        <Text onPress={() => setText('new state')}>{textWithState}</Text>
 
-      <ScrollView style={{height: 200}} ref={scrollViewRef}>
-        {listItems.map((value, index) => (<Text key={index}>Hello World!</Text>))}
-      </ScrollView>
-      <Button onPress={onScrollToTop} title='Scroll To Top'></Button>
+        <ScrollView style={{height: 200}} ref={scrollViewRef}>
+          {listItems.map((value, index) => (<Text key={index}>Hello World!</Text>))}
+        </ScrollView>
+        <Button onPress={onScrollToTop} title="Scroll To Top" />
+
+        <ThemeProvider>
+            <ThemeToggle />
+        </ThemeProvider>
     </SafeAreaView>
   );
 };
