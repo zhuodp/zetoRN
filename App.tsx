@@ -6,14 +6,11 @@
  */
 
 import React, {useState, useEffect, useRef} from 'react';
-import { Text, SafeAreaView, ScrollView, Button } from 'react-native';
+import { Text, SafeAreaView, ScrollView, Button, Image } from 'react-native';
 import MyText from './components/MyText';
-import styles from './components/styles';
-import ItemView from './components/ItemView';
 import { ThemeProvider } from './components/ThemeProvider';
 import { ThemeToggle } from './components/ThemeToggle';
 import useToggle from './customHooks/useToggle';
-
 
 const App = () => {
 
@@ -36,6 +33,8 @@ const App = () => {
 
   const [isOn, toggleIsOn] = useToggle(false);
 
+  const [imageSource, setImageSource] = useState('https://via.placeholder.com/150');
+
   return (
     <SafeAreaView>
         {/* basic UI */}
@@ -57,6 +56,17 @@ const App = () => {
         </ThemeProvider>
 
         <Button title={isOn ? 'ON' : 'OFF'} onPress={toggleIsOn} />
+
+        <Image
+          source={{uri: imageSource}}
+          style={{width: 100, height: 100, backgroundColor: 'red'}}
+          resizeMode={'stretch'}
+          onError={() => {
+            console.log('Error has been detected while loading an image');
+            // call setImageSource to set the default image
+            // setImageSource()
+          }}
+        />
 
     </SafeAreaView>
   );
