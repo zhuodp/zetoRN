@@ -46,8 +46,16 @@ const App = () => {
 
         <Text onPress={() => setText('new state')}>{textWithState}</Text>
 
-        <ScrollView style={{height: 200}} ref={scrollViewRef}>
-          {listItems.map((value, index) => (<Text key={index}>Hello World!</Text>))}
+        <ScrollView
+          contentContainerStyle={{backgroundColor: 'green'}}
+          showsHorizontalScrollIndicator={true}
+          horizontal={true}
+          ref={scrollViewRef}
+          onScroll={() => {
+            console.log('scrollView is now scrolling');
+          }}
+        >
+          {listItems.map((value, index) => (<Text style={{padding: 20}} key={index}>Hello World!</Text>))}
         </ScrollView>
         <Button onPress={onScrollToTop} title="Scroll To Top" />
 
