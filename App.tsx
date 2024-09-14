@@ -6,7 +6,7 @@
  */
 
 import React, {useState, useEffect, useRef} from 'react';
-import { Text, SafeAreaView, ScrollView, Button, Image } from 'react-native';
+import { Text, SafeAreaView, ScrollView, Button, Image, View } from 'react-native';
 import MyText from './components/MyText';
 import { ThemeProvider } from './components/ThemeProvider';
 import { ThemeToggle } from './components/ThemeToggle';
@@ -75,6 +75,13 @@ const App = () => {
             // setImageSource()
           }}
         />
+
+        <View
+          style={{flexDirection: 'row', justifyContent: 'space-around', alignItems: 'flex-start', backgroundColor: 'grey'}}>
+            <View style={{backgroundColor: 'red', width: 50, height: 50}}/>
+            <View style={{backgroundColor: 'blue', width: 50, height: 50}}/>
+            <View style={{backgroundColor: 'black', width: 50, height: 50}}/>
+        </View>
 
     </SafeAreaView>
   );
