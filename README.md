@@ -1,79 +1,62 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## 这个项目是什么?
 
-## Step 1: Start the Metro Server
+Udemy 中的 RN 教学课程的个人练习项目: 
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+React Native: Mobile App Development (CLI) [2024]
 
-To start Metro, run the following command from the _root_ of your React Native project:
+https://www.udemy.com/course/react-native-mobile-app-development/?couponCode=MTST7102224A2
 
-```bash
-# using npm
-npm start
 
-# OR using Yarn
-yarn start
-```
 
-## Step 2: Start your Application
+## 在这个项目里的练习项
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+1. RN 项目环境搭建
+2. RN 项目初始化
+3. 安装 ESLint 和 Prettier 作为 RN 代码格式化工具
+4. 了解 JSX 
+5. RN 基础项目运行
+6. JS 语法
+   1. Let 和 Const
+   2. 箭头函数
+   3. 对象和属性及其相关方法
+   4. Array
+   5. Rest 运算符
+   6. Async、Await、Promise
+7. RN 基础
+   1. Borders
+   2. Margins
+   3. Paddings
+   4. Position Absolute Relative zIndex
+   5. Text Styles
+   6. StyleSheet 使用
+   7. component 封装
+   8. Props 和 PropTypes
+   9. Event Handling(点击事件处理)
+   10. React Hooks
+       1. useState
+       2. useEffect
+       3. useREf
+       4. useContext
+       5. 自定义 Hooks
+   11. View 组件的生命周期
+   12. 基础组件
+       1. Image
+       2. Text
+       3. ScrollView
+       4. Button
+       5. SwitchBUtton
+       6. TextInput
+       7. Switch
+       8. FlatList
+   13. FontAwsome 库使用
+   14. FlexBox 和相关属性的使用
+   15. 安装自定义 Fonts
 
-### For Android
 
-```bash
-# using npm
-npm run android
 
-# OR using Yarn
-yarn android
-```
 
-### For iOS
 
-```bash
-# using npm
-npm run ios
 
-# OR using Yarn
-yarn ios
-```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
